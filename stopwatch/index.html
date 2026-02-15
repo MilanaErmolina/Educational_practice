@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch</title>
+    <style>
+        body { font-family: Arial; text-align: center; margin-top: 50px; }
+        .display { font-size: 48px; margin: 20px; }
+        button { font-size: 16px; margin: 5px; padding: 10px 20px; }
+    </style>
+</head>
+<body>
+    <h2>Секундомер</h2>
+    <div id="display" class="display">00:00</div>
+    <button id="start">Старт</button>
+    <button id="stop">Стоп</button>
+    <button id="reset">Сброс</button>
+    <script>
+        let timer = null;
+        let seconds = 0;
+        const display = document.getElementById('display');
+        const startBtn = document.getElementById('start');
+        const stopBtn = document.getElementById('stop');
+        const resetBtn = document.getElementById('reset');
+
+        function formatTime(totalSeconds) {
+            const mins = Math.floor(totalSeconds / 60);
+            const secs = totalSeconds % 60;
+            return `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+        }
+
+        function updateDisplay() {
+            display.textContent = formatTime(seconds);
+        }
+
+        function startTimer() {
+            if (timer) return;
+            timer = setInterval(() => {
+                seconds++;
+                updateDisplay();
+            }, 1000);
+        }
+
+        function stopTimer() {
+            clearInterval(timer);
+            timer = null;
+        }
+
+        function resetTimer() {
+            stopTimer();
+            seconds = 0;
+            updateDisplay();
+        }
+
+        startBtn.addEventListener('click', startTimer);
+        stopBtn.addEventListener('click', stopTimer);
+        resetBtn.addEventListener('click', resetTimer);
+        updateDisplay();
+    </script>
+</body>
+</html>
