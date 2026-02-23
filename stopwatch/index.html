@@ -12,34 +12,36 @@
 </head>
 <body>
     <h2>Секундомер</h2>
-    <div id="display" class="display">00:00</div>
+    <div id="display" class="display">00:00:00</div>
     <button id="start">Старт</button>
     <button id="stop">Стоп</button>
     <button id="reset">Сброс</button>
     <script>
         let timer = null;
-        let seconds = 0;
+        let centiseconds = 0; // 1 centisecond = 0.01 second
         const display = document.getElementById('display');
         const startBtn = document.getElementById('start');
         const stopBtn = document.getElementById('stop');
         const resetBtn = document.getElementById('reset');
 
-        function formatTime(totalSeconds) {
+        function formatTime(totalCentiseconds) {
+            const totalSeconds = Math.floor(totalCentiseconds / 100);
             const mins = Math.floor(totalSeconds / 60);
             const secs = totalSeconds % 60;
-            return `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+            const cents = totalCentiseconds % 100;
+            return `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}:${cents.toString().padStart(2, '0')}`;
         }
 
         function updateDisplay() {
-            display.textContent = formatTime(seconds);
+            display.textContent = formatTime(centiseconds);
         }
 
         function startTimer() {
             if (timer) return;
             timer = setInterval(() => {
-                seconds++;
+                centiseconds++;
                 updateDisplay();
-            }, 1000);
+            }, 10); // каждые 10 мс = 1/100 секунды
         }
 
         function stopTimer() {
@@ -49,7 +51,7 @@
 
         function resetTimer() {
             stopTimer();
-            seconds = 0;
+            centiseconds = 0;
             updateDisplay();
         }
 
