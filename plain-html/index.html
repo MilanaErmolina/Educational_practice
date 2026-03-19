@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/css/index.css">
+    <title>Главная</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header">
+                <div class="logo">
+                    <img src="/src/icons/logo.png" alt="logo">
+                    <span class="logo__desc">НОРТЭКС</span>
+                </div>
+                <ul class="menu-bar">
+                    <li><a href="#about-us">О нас</a></li>
+                    <li><a href="/competition.html">Каталог</a></li>
+                    <li><a href="#search">Отзывы</a></li>
+                    <li><a href="#footer">Контакты</a></li>
+                    <li><a href="/account.html">Личный кабинет</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section  class="popular-contests">
+            <div class="container">
+                <div class="popular-contests__block">                   
+                    <div class="content__text">
+                        <h1 class="title content__title">Поставщик ГСМ для предприятий</h1>
+                        <p class="desc content__desc">Мы предлагаем сертифицированную продукцию для техники и производства.</p>
+                        <a class="content__link" href="/schedule.html">Подробнее</a>
+                    </div>
+                    <div class="content__image">
+                        <img src="/src/image/1_block.png" alt="фон">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="about-us" class="about-us">
+            <div class="container">
+                <h1 class="title about-us__title">О нас</h1>
+                <div class="about-us__content">
+                    <div class="about-us__block">
+                        <p class="desc about-us__text__desc">
+                            Компания «НОРТЭКС» начала свою деятельность в 2013 году. Расположена на территории
+                            центрального региона с главным офисом в г. Кострома. Занимаемся комплексным снабжением
+                            предприятий с основным упором на ГСМ. В нашей компании работают только высококвалифицированные 
+                            специалисты, которые проконсультируют клиента по вопросам сотрудничества и организуют быструю 
+                            и качественную доставку продукции в любую точку России.</p>
+                        <div class="indicators__block">                           
+                            <div class="indicator">
+                                <h1 class="indicator-header title">1500+</h1>
+                                <p class="description-indicator">клиентов по РФ</p>
+                            </div>
+                            <div class="indicator">
+                                <h1 class="indicator-header title">600+</h1>
+                                <p class="description-indicator">видов продукции</p>
+                            </div>
+                            <div class="indicator">
+                                <h1 class="indicator-header title">40%</h1>
+                                <p class="description-indicator">скидки на все</p>
+                            </div>
+                            <div class="indicator">
+                                <h1 class="indicator-header title">13+</h1>
+                                <p class="description-indicator">лет на рынке</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="welcome">
+                        <iframe src="https://vk.com/video_ext.php?oid=-222851340&id=456239019&hash=d6a7d6d4c1338584&hd=1" width="640" height="360" allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;" frameborder="0" allowfullscreen></iframe>                   
+                    </div>
+                </div>   
+            </div>
+        </section>
+        <section id="products" class="products">
+            <div class="container">
+                <div class="products__content">
+                    <div class="products__content-text">
+                        <h1 class="products-title title">Каталог товаров</h1>
+                        <p class="products-desc desc">Компания «Нортэкс» предлагает широкий выбор промышленных товаров, включая горюче-смазочные материалы, 
+                            технические жидкости, запчасти и комплектующие для производственного оборудования. В нашем каталоге — тысячи позиций от ведущих 
+                            производителей, что позволяет закрывать потребности предприятий любого масштаба.</p>
+                        <a href="#" class="products-link">Подробнее</a>
+                    </div>       
+                    <div class="products__content-cards">
+                        <div class="products__content-card">
+                            <div class="products__content-block">
+                                <img src="/src/image/catalog1.jpg" alt="товары" class="products-image">
+                            </div>
+                            <p class="products-description">Масла</p>
+                        </div>
+                        <div class="products__content-card">
+                            <div class="products__content-block">
+                                <img src="/src/image/catalog2.jpg" alt="товары" class="products-image">
+                            </div>
+                            <p class="products-description">Антифриз и тормозные жидкости</p>
+                        </div>
+                        <div class="products__content-card">
+                            <div class="products__content-block">
+                                <img src="/src/image/catalog5.jpg" alt="товары" class="products-image">
+                            </div>
+                            <p class="products-description">Шины и диски</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact-form" class="contact-form">
+            <div class="container">
+                <div class="contact-form-block">
+                    <h2 class="subtitle consultation__subtitle">Бесплатная консультация</h2>
+                    <form action="#" class="consultation__form">
+                        <div class="inline-form">
+                            <div class="input-field">
+                                <input type="text" id="name" name="name" placeholder="Ваше имя">
+                            </div>
+                            <div class="input-field">
+                                <input type="tel" id="phone" name="phone" placeholder="Телефон +7 (___) ___-__-__">
+                            </div>
+                            <div class="input-field">
+                                <textarea id="message" name="message" placeholder="Напишите ваш вопрос или комментарий" required></textarea>
+                            </div>
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="agreement" name="agreement" required>
+                                <label for="agreement">Я согласен с <a href="#" target="_blank">условиями обработки персональных данных</a></label>
+                            </div>
+                            <button class="button button-form" type="submit">Отправить</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer id="footer">
+        <div class="container">
+            <div class="footer__info">
+                <div class="logo">
+                    <span class="logo__desc desc-footer">НОРТЭКС</span>
+                </div>
+                <ul>
+                    <li class="link-desc"><a href="#">Tel:+7 (4842) 23-45-67</a></li>
+                    <li class="link-desc"><a  href="#">e-mail: family@cosmos.ru</a></li>
+                </ul>
+                <ul class="footer__block">
+                    <li class="link-desc"><a href="#">Каталог</a></li>
+                    <li class="link-desc"><a href="#">Отзывы</a></li>
+                    <li class="link-desc"><a href="#">Личный кабинет</a></li>
+                </ul>
+            </div>
+            <p class="footer_copyrignt">©2026 Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script>
+        (function() {
+            const form = document.querySelector('.consultation__form');
+            if (!form) return;
+
+            const fields = [form.name, form.phone, form.message, form.agreement];
+            const submitBtn = form.querySelector('.button-form');
+
+            const isFormValid = () => fields.every(field => 
+                field.type === 'checkbox' ? field.checked : field.value.trim() !== ''
+            );
+
+            const updateButton = () => {
+                const valid = isFormValid();
+                submitBtn.disabled = !valid;
+                submitBtn.style.backgroundColor = valid ? '#f0ca33' : '#cccccc';
+                submitBtn.style.color = valid ? '#fff' : '#666666';
+            };
+
+            fields.forEach(field => {
+                field.addEventListener('input', updateButton);
+                field.addEventListener('change', updateButton);
+            });
+
+            updateButton();
+
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                if (isFormValid()) {
+                    alert('✅ Спасибо! Ваша заявка успешно отправлена.');
+                    form.reset();
+                    updateButton();
+                }
+            });
+        })();
+    </script>
+</body>
+</html>
